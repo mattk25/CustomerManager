@@ -29,6 +29,10 @@ customersManager.customersApp = {};
                 controller: 'AboutController',
                 templateUrl: '/app/views/about.html'
             })
+            .when('/reference', {
+                controller: 'ReferenceController',
+                templateUrl: '/app/views/bookmark/createReference.html'
+            })
             .otherwise({ redirectTo: '/customers' });
 
     }]);

@@ -89,7 +89,7 @@
             });
         }
 
-        function buildPagingUri(pageIndex, pageSize) {
+        function buildPagingUri(pageIndex, pageSize) {re
             var uri = '?$top=' + pageSize + '&$skip=' + (pageIndex * pageSize);
             return uri;
         }

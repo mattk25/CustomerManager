@@ -19,6 +19,7 @@ exports.customers = function (req, res) {
   });
 };
 
+
 exports.customer = function (req, res) {
   console.log('*** customer');
 
@@ -139,6 +140,22 @@ exports.checkemail = function (req, res) {
       res.json({'status': (customer === undefined)});
     }
   });
+};
+
+exports.addReference = function (req, res) {
+    console.log('*** addReference');
+            db.addReference(req.body,  function(err){
+                if (err) {
+                    console.log('*** addCustomer err');
+                    res.json(false);
+                } else {
+                    console.log('*** addCustomer ok');
+
+                    res.json(req.body);
+                }
+            });
+
+
 };
 
 

@@ -5,7 +5,8 @@
     };
 
     customersManager.customersApp.factory('dataService',
-        ['config', 'customersService', 'customersBreezeService', dataService]);
+        ['config', 'customersService','customersBreezeService', dataService]);
+
 
 }());
 

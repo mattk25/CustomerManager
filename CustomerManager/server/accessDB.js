@@ -2,6 +2,7 @@
 var mongoose = require('mongoose')
   , Schema = mongoose.Schema
   , Customer = require('./models/customer')
+  , Reference = require('./models/reference')
   , State = require('./models/state')
   , util = require('util');
 
@@ -132,7 +133,37 @@ module.exports = {
     State.find({'id': stateId}, {}, function(err, state) {
       callback(null, state);
     });
-  }
+  },
+    
+    
+// new stuff    
+    // insert a  reference
+    addReference: function(req_body, state, callback) {
+        console.log('*** accessDB.addReference');
+        console.log(req_body);
+
+        var reference = new Reference();
+        reference.title = req_body.title;
+        reference.url = req_body.url;
+        reference.type = req_body.type;
+        reference.text = req_body.text;
+        reference.vote = req_body.vote;
+        reference.rating = req_body.rating;
+
+
+        reference.save(function(err , reference) {
+            if (err) {
+                console.log('*** new reference save err: ' + err);
+            } else {
+                console.log(reference);
+                callback(null, reference);
+            }
+
+
+        });
+    }
+    
+    
 
 
 }

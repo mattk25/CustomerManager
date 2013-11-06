@@ -62,7 +62,7 @@ app.get('/api/dataservice/CustomersSummary', api.customersSummary);
 app.get('/api/dataservice/CustomerById/:id', api.customer);
 app.get('/api/dataservice/CheckUnique/:email', api.checkemail);
 
-
+app.post('/api/dataservice/Reference', api.addReference);
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
 

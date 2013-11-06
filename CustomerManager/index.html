@@ -20,6 +20,7 @@
                     <li data-ng-class="{'active':highlight('/customers')}"><a href="#/customers">Customers</a></li>
                     <li data-ng-class="{'active':highlight('/orders')}"><a href="#/orders">Orders</a></li>
                     <li data-ng-class="{'active':highlight('/about')}"><a href="#/about">About</a></li>
+                    <li data-ng-class="{'active':highlight('/reference')}"><a href="#/reference">Reference</a></li>
                 </ul>
             </div>
         </div>
@@ -71,15 +72,23 @@
     <script src="/app/services/config.js"></script>
     <script src="/app/services/customersBreezeService.js"></script>
     <script src="/app/services/customersService.js"></script>
+
     <script src="/app/services/dataService.js"></script>
     <script src="/app/services/modalService.js"></script>
     <script src="/app/services/routeResolver.js"></script>
-    <script src="/app/controllers/customers/customerEditController.js"></script>
+
+    <script src="/app/controllers/bookmark/createReferenceController.js"></script>
     <script src="/app/controllers/customers/customerOrdersController.js"></script>
     <script src="/app/controllers/customers/customersController.js"></script>
     <script src="/app/controllers/orders/orderChildController.js"></script>
     <script src="/app/controllers/orders/ordersController.js"></script>
     <script src="/app/controllers/aboutController.js"></script>
     <script src="/app/controllers/navbarController.js"></script>
+
+    <!-- Bookmark stuff -->
+    <!-- Bookmark services -->
+    <script src="/app/services/referenceService.js"></script>
+
+
 </body>
 </html>
