@@ -1,0 +1,93 @@
+<div class="view">
+    <div class="container">
+        <header>
+            <h3>{{title}} Reference</h3>
+        </header>
+        <form name="refForm" novalidate>
+            <div>
+                <div class="row">
+                    <div class="span2">
+                        title:
+                    </div>
+                    <div class="span10">
+                        <input type="text" name="title" data-ng-model="reference.title" required />
+                        <span class="errorMessage" ng-show="refForm.title.$dirty && refForm.title.$invalid">
+                            title is required.
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2">
+                       url:
+                    </div>
+                    <div class="span10">
+                        <input type="text" data-ng-model="reference.url" required />
+                        <span class="errorMessage" ng-show="refForm.url.$dirty && refForm.url.$invalid">
+                            Last name is required
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2">
+                        type:
+                    </div>
+                    <div class="span10">
+                        <input type="text" data-ng-model="reference.type" required />
+                        <span class="errorMessage" ng-show="refForm.type.$dirty && refForm.type.$invalid">
+                            Last name is required
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2">
+                        text:
+                    </div>
+                    <div class="span10">
+                        <input type="text" data-ng-model="reference.text" required />
+                        <span class="errorMessage" ng-show="refForm.text.$dirty && refForm.text.$invalid">
+                            Last name is required
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2">
+                        vote:
+                    </div>
+                    <div class="span10">
+                        <input type="number" name="address" data-ng-model="reference.vote" required />
+                        <span class="errorMessage" ng-show="refForm.vote.$dirty && refForm.vote.$invalid">
+                            Address is required
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span2">
+                        vote:
+                    </div>
+                    <div class="span10">
+                        <input type="number" name="address" data-ng-model="reference.rating" required />
+                        <span class="errorMessage" ng-show="refForm.rating.$dirty && refForm.rating.$invalid">
+                            Address is required
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <button type="submit" class="btn btn-primary" data-ng-click="saveReference()" >{{buttonText}}</button>
+                        &nbsp;&nbsp;
+                        <button class="btn btn-danger" data-ng-if="customer.id > 0" data-ng-click="deleteCustomer()">Delete</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <br />
+                    <div class="span10 label label-success show-hide-animation" data-ng-show="updateStatus">
+                        <i class="icon-thumbs-up icon-white"></i>&nbsp;&nbsp;Reference updated!
+                    </div>
+                    <div class="span10 label label-important show-hide-animation" data-ng-show="errorMessage">
+                        <i class="icon-thumbs-down icon-white"></i>&nbsp;&nbsp;Error: {{ errorMessage }}
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
